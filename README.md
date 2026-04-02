@@ -6,6 +6,32 @@ A clean, interactive finance dashboard built with React and Redux for tracking i
 
 This dashboard provides a comprehensive view of your financial activity with real-time calculations, visual analytics, and flexible filtering. It supports role-based access control where admins can add transactions while viewers have read-only access.
 
+## Screenshots
+
+### Dashboard Overview
+
+![Dashboard Overview](src/assets/dashboard-overview.png)
+
+### Transactions Page
+
+![Transactions Page](src/assets/transactions-page.png)
+
+### Insights Page
+
+![Insights Page](src/assets/insights-page.png)
+
+### Settings Page
+
+![Settings Page](src/assets/settings-page.png)
+
+### Dark Mode Dashboard
+
+![Dark Mode Dashboard](src/assets/dark-mode-dashboard.png)
+
+### Edit Transaction Modal
+
+![Edit Transaction Modal](src/assets/edit-transaction-modal.png)
+
 ## Features
 
 ### 1. Dashboard Overview
@@ -255,4 +281,3 @@ This dashboard meets all core requirements:
 ✅ Clean UI with proper error and empty states
 ✅ Component modularity and code organization
 ✅ This comprehensive documentation
-
