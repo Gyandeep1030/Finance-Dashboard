@@ -2,6 +2,10 @@
 
 A clean, interactive finance dashboard built with React and Redux for tracking income, expenses, and financial insights.
 
+## Live Demo
+
+https://finance-dashboard-kohl-ten.vercel.app/
+
 ## Overview
 
 This dashboard provides a comprehensive view of your financial activity with real-time calculations, visual analytics, and flexible filtering. It supports role-based access control where admins can add transactions while viewers have read-only access.
@@ -125,6 +129,32 @@ src/
 ```bash
 npm run build
 ```
+
+## Deploy on Vercel
+
+This project is ready to deploy on Vercel.
+
+Current deployment:
+
+https://finance-dashboard-kohl-ten.vercel.app/
+
+### Recommended Vercel Settings
+
+- **Framework Preset**: Vite
+- **Build Command**: `npm run build`
+- **Output Directory**: `dist`
+- **Install Command**: `npm install`
+
+### Important Note for Routing
+
+This app uses `BrowserRouter`, so a `vercel.json` rewrite is included to make direct visits to routes like `/transactions`, `/insights`, and `/settings` work correctly after deployment.
+
+### Deployment Steps
+
+1. Import the GitHub repository into Vercel
+2. Keep the default Vite build settings
+3. Deploy the project
+4. Open the generated Vercel URL
 
 ## How to Use
 
