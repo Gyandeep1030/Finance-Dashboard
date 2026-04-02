@@ -1,0 +1,12 @@
+/**
+ * App Styles
+ * 
+ * Global app container styles.
+ * Component-specific styles are in the styles/ directory.
+ */
+
+/* Main app container */
+#app {
+  width: 100%;
+  min-height: 100vh;
+}

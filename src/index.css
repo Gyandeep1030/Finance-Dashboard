@@ -1,0 +1,10 @@
+/**
+ * Global Styles Entry Point
+ *
+ * Import order matters:
+ * 1. base.css - Design system variables and utilities
+ * 2. Component-specific CSS files are imported in individual components
+ * 3. Layout and override styles
+ */
+
+@import './styles/base.css';

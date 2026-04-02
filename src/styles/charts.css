@@ -1,0 +1,178 @@
+/**
+ * Charts Styles
+ * 
+ * Contains styling for:
+ * - Charts container grid
+ * - Individual chart containers
+ * - Chart titles
+ * - Empty states
+ * - Recharts library customizations
+ * - Responsive adjustments
+ */
+
+/* ============================================
+   CHARTS CONTAINER
+   ============================================ */
+
+.charts-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4xl);
+  margin-top: var(--space-6xl);
+  margin-bottom: var(--space-4xl);
+}
+
+/* ============================================
+   INDIVIDUAL CHART CONTAINER
+   ============================================ */
+
+/**
+ * Chart Container Component
+ *
+ * Features:
+ * - Responsive card styling
+ * - Hover lift and border color change
+ * - Shadow elevation on hover
+ * - Smooth page load animation
+ */
+.chart-container {
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4xl);
+  box-shadow: var(--shadow-md);
+  transition: box-shadow var(--transition-base), transform var(--transition-base), border-color var(--transition-base);
+  animation: slideInUp 0.6s ease-out backwards;
+}
+
+/* Stagger animation for charts */
+.charts-container .chart-container:nth-child(1) {
+  animation-delay: 0.4s;
+}
+
+.charts-container .chart-container:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.chart-container:hover {
+  box-shadow: var(--shadow-xl);
+  transform: translateY(-2px);
+  border-color: var(--color-accent);
+}
+
+/* ============================================
+   CHART TITLE
+   ============================================ */
+
+.chart-title {
+  margin: 0 0 var(--space-xl) 0;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-heading);
+  letter-spacing: -0.3px;
+}
+
+/* ============================================
+   EMPTY STATE
+   ============================================ */
+
+.chart-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  color: var(--color-text);
+  font-size: var(--font-size-lg);
+  margin: 0;
+}
+
+/* ============================================
+   RECHARTS CUSTOMIZATIONS
+   ============================================ */
+
+/* Remove default browser outline */
+.chart-container .recharts-surface {
+  outline: none;
+}
+
+/* Chart text color inherits from design system */
+.chart-container text {
+  fill: var(--color-text);
+}
+
+/* Axis tick font size */
+.chart-container .recharts-cartesian-axis-tick {
+  font-size: var(--font-size-sm);
+}
+
+/* Tooltip styling */
+.chart-container .recharts-tooltip {
+  outline: none;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 1024px) {
+  .charts-container {
+    grid-template-columns: 1fr;
+    gap: var(--space-3xl);
+    margin-top: var(--space-5xl);
+    margin-bottom: var(--space-4xl);
+  }
+
+  .chart-container {
+    padding: var(--space-2xl);
+  }
+
+  .chart-title {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--space-lg);
+  }
+}
+
+@media (max-width: 768px) {
+  .charts-container {
+    gap: var(--space-xl);
+    margin-top: var(--space-4xl);
+    margin-bottom: var(--space-2xl);
+  }
+
+  .chart-container {
+    padding: var(--space-xl);
+    border-radius: var(--radius-md);
+  }
+
+  .chart-title {
+    font-size: var(--font-size-base);
+    margin-bottom: var(--space-md);
+  }
+
+  .chart-container .recharts-cartesian-axis-tick {
+    font-size: var(--font-size-sm);
+  }
+}
+
+@media (max-width: 480px) {
+  .charts-container {
+    gap: var(--space-lg);
+    margin-top: var(--space-4xl);
+    margin-bottom: var(--space-lg);
+  }
+
+  .chart-container {
+    padding: var(--space-md);
+    border-radius: var(--radius-md);
+  }
+
+  .chart-title {
+    font-size: var(--font-size-sm);
+    margin-bottom: var(--space-md);
+  }
+
+  .chart-empty {
+    height: 250px;
+    font-size: var(--font-size-base);
+  }
+}
